@@ -91,9 +91,9 @@ class Property(Base):
         cascade="all, delete-orphan"
     )
 
-    maintenance_events: Mapped[List["MaintenanceEvent"]] = relationship(
-        back_populates="property",
-        cascade="all, delete-orphan"
+    events: Mapped[List["Event"]] = relationship(
+    back_populates="property",
+    cascade="all, delete-orphan"
     )
 
     def __repr__(self) -> str:
